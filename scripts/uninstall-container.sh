@@ -62,7 +62,7 @@ fi
 FILES=$(pkgutil --only-files --files com.apple.container-installer)
 for i in ${FILES[@]}; do
     # this command can fail for some of the reported files from pkgutil such as 
-    # `/usr/local/bin/._uninstall-container.sh``
+    # `/usr/local/bin/._uninstall-container.sh`
     sudo rm $INSTALL_DIR/$i &> /dev/null
 done
 
